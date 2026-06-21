@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万博体育 · 稳定入口介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f6f8fb;
+            color: #1e293b;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* — 深色头图 hero — */
+        .hero {
+            background: linear-gradient(145deg, #0b1a2e 0%, #142b44 100%);
+            color: #eaf0f6;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #f6f8fb;
+            clip-path: ellipse(70% 100% at 50% 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b6ccdf;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* — 浅色正文区 — */
+        .container {
+            max-width: 880px;
+            margin: -1.5rem auto 3rem;
+            padding: 2rem 2rem 3rem;
+            background: #ffffff;
+            border-radius: 28px 28px 32px 32px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .intro {
+            margin-bottom: 2.2rem;
+        }
+
+        .intro p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #1f2a41;
+        }
+
+        .intro p:first-of-type {
+            font-size: 1.1rem;
+            font-weight: 450;
+            color: #0b1e30;
+            border-left: 4px solid #2d6b9c;
+            padding-left: 1.1rem;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #1a669e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0d4a78;
+            border-bottom-color: #2d6b9c;
+        }
+
+        /* 特点列表 (卡片式) */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 2.4rem 0 2rem;
+        }
+
+        .feature-card {
+            background: #f4f7fc;
+            border-radius: 16px;
+            padding: 1.1rem 1.3rem;
+            transition: background 0.2s, box-shadow 0.2s;
+            border: 1px solid #e2e9f2;
+        }
+
+        .feature-card:hover {
+            background: #edf3fa;
+            box-shadow: 0 4px 10px rgba(0, 20, 40, 0.05);
+        }
+
+        .feature-card .label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #142b44;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.3px;
+        }
+
+        .feature-card .desc {
+            font-size: 0.9rem;
+            color: #2e405b;
+            line-height: 1.5;
+        }
+
+        .scenario {
+            margin: 2rem 0 2.2rem;
+            padding: 1.2rem 0;
+            border-top: 1px solid #dee7f0;
+            border-bottom: 1px solid #dee7f0;
+        }
+
+        .scenario p {
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-mini {
+            background: #f9fbfe;
+            border-radius: 18px;
+            padding: 1.2rem 1.5rem;
+            margin-top: 1.6rem;
+            border: 1px solid #e5ecf5;
+        }
+
+        .faq-mini h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0b1f33;
+            margin-bottom: 0.7rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-mini details summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: #1a4a6e;
+            padding: 0.25rem 0;
+        }
+
+        .faq-mini details p {
+            margin: 0.3rem 0 0.8rem 1.2rem;
+            font-size: 0.92rem;
+            color: #2a3c57;
+        }
+
+        .outro {
+            margin-top: 2.2rem;
+            font-size: 0.95rem;
+            color: #314e6b;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e5ecf5;
+            text-align: right;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 0.95rem;
+            }
+            .container {
+                padding: 1.6rem 1.2rem 2rem;
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .faq-mini {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>万博体育</h1>
+    <p class="sub">一份关于稳定访问与页面说明的叙述</p>
+</header>
+
+<main class="container">
+
+    <div class="intro">
+        <p>从最初寻找一个可靠的体育信息入口，到逐渐了解其页面结构与内容逻辑——整个过程比预想中更清晰。</p>
+        <p><a href="https://m--wanbo.com">万博体育</a> 所提供的界面，围绕赛事数据、实时动态以及分类导航展开，布局侧重信息层级，减少冗余元素。尤其对于需要频繁查阅比分与赛程的用户，页面的响应速度与模块划分会直接影响使用体验。经过一段时间的观察，其访问稳定性与内容更新节奏基本保持一致。</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <span class="label">入口一致性</span>
+            <span class="desc">主域名长期可用，页面结构变动频率低，减少记忆成本与反复确认的麻烦。</span>
+        </div>
+        <div class="feature-card">
+            <span class="label">内容分区明确</span>
+            <span class="desc">赛程、积分、数据统计各自独立板块，无过度交叉跳转，降低浏览负担。</span>
+        </div>
+        <div class="feature-card">
+            <span class="label">轻量页面加载</span>
+            <span class="desc">首屏资源控制在合理范围，弱网环境下内容仍可逐步呈现，不依赖过多脚本。</span>
+        </div>
+        <div class="feature-card">
+            <span class="label">导航逻辑直观</span>
+            <span class="desc">顶部与侧边栏定位清晰，常用功能两级以内可达，适合不同经验的使用者。</span>
+        </div>
+    </div>
+
+    <div class="scenario">
+        <p><strong>常见使用场景</strong> —— 赛前查看对阵与历史交锋、赛中追踪实时比分、赛后浏览数据汇总。这些操作在 <a href="https://m--wanbo.com">万博体育</a> 页面内均可通过固定入口完成，无需反复搜索或切换界面。页面默认以赛事时间轴排序，同时提供筛选功能，方便聚焦特定联赛或队伍。</p>
+        <p>对于初次接触的用户，建议先从顶部导航栏的「赛事」板块入手，熟悉信息结构后再探索其他模块；日常高频使用时，可将页面添加至浏览器书签，以保持访问路径的简洁。</p>
+    </div>
+
+    <div class="faq-mini">
+        <h3>常见疑问 · 简述</h3>
+        <details>
+            <summary>页面无法加载时如何处理？</summary>
+            <p>首先检查本地网络连接与 DNS 解析；若长时间无法访问，可稍后重试。网站通常会在短时间内恢复服务。</p>
+        </details>
+        <details>
+            <summary>数据更新频率大概是多久？</summary>
+            <p>核心赛程与实时比分在比赛期间保持分钟级更新；赛后统计通常在比赛结束后数小时内完成归档。</p>
+        </details>
+        <details>
+            <summary>是否需要注册才能浏览？</summary>
+            <p>基础内容（赛程、比分、排名等）无需登录即可查看。部分深度数据或个性化功能可能需要账户支持，请以页面实际提示为准。</p>
+        </details>
+    </div>
+
+    <div class="outro">
+        <p>保持稳定的信息来源，比频繁切换更加有效。希望这份关于页面入口与内容的说明，能帮助你更快熟悉整体环境。</p>
+    </div>
+
+</main>
+
+</body>
+</html>
